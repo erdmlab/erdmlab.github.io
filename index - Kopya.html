@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delayed Content with Photos</title>
+    <title>Delayed Content</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,13 +20,6 @@
             border: 2px solid #333;
             padding: 10px;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .box img {
-            max-width: 150px;
-            margin-right: 20px;
-            display: none; /* Initially hide the images */
         }
         .hidden {
             display: none;
@@ -44,35 +37,30 @@
     <div class="container">
         <div class="box">
             <p class="time">April 16, 2024 12:00 PM</p>
-            <img id="image1" src="image1.webp" alt="Image 1">
             <div id="paragraph1" class="hidden">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus neque sit amet nisi gravida ultrices.</p>
             </div>
         </div>
         <div class="box">
             <p class="time">April 20, 2024 3:30 PM</p>
-            <img id="image2" src="image1.webp" alt="Image 2">
             <div id="paragraph2" class="hidden">
                 <p>Nullam hendrerit lectus ac lorem mattis, vel congue tortor fermentum.</p>
             </div>
         </div>
         <div class="box">
             <p class="time">April 25, 2024 9:45 AM</p>
-            <img id="image3" src="image1.webp" alt="Image 3">
             <div id="paragraph3" class="hidden">
                 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque at turpis odio.</p>
             </div>
         </div>
         <div class="box">
             <p class="time">May 1, 2024 2:15 PM</p>
-            <img id="image4" src="image1.webp" alt="Image 4">
             <div id="paragraph4" class="hidden">
                 <p>Phasellus consequat dolor non arcu varius, quis maximus est bibendum.</p>
             </div>
         </div>
         <div class="box">
             <p class="time">May 7, 2024 11:00 AM</p>
-            <img id="image5" src="image1.webp" alt="Image 5">
             <div id="paragraph5" class="hidden">
                 <p>Suspendisse potenti. Morbi rutrum elit sit amet lectus suscipit, nec sollicitudin nunc mattis.</p>
             </div>
@@ -80,7 +68,7 @@
     </div>
 
     <script>
-        function showContent(id) {
+        function showParagraph(id) {
             document.getElementById(id).classList.remove('hidden');
             document.getElementById(id).classList.add('visible');
         }
@@ -88,19 +76,17 @@
         // Define the dates with hours and minutes when paragraphs should become visible
         const dates = [
             { id: 'paragraph1', date: new Date('April 16, 2024 12:00:00') },
-            { id: 'paragraph2', date: new Date('April 20, 2023 15:30:00') },
+            { id: 'paragraph2', date: new Date('April 13, 2024 15:30:00') },
             { id: 'paragraph3', date: new Date('April 25, 2024 09:45:00') },
             { id: 'paragraph4', date: new Date('May 1, 2024 14:15:00') },
-            { id: 'paragraph5', date: new Date('May 7, 2024 11:00:00') }
+            { id: 'paragraph5', date: new Date('May 7, 2023 11:00:00') }
         ];
 
-        // Show the content and image for each paragraph after the specified time
+        // Check the current date against the specified dates and show/hide paragraphs accordingly
         const currentDate = new Date();
         dates.forEach(item => {
             if (currentDate >= item.date) {
-                showContent(item.id);
-                const imageId = 'image' + item.id.substring(9); // Extract the number from the paragraph id
-                document.getElementById(imageId).style.display = 'inline'; // Show the corresponding image
+                showParagraph(item.id);
             }
         });
     </script>
