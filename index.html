@@ -21,6 +21,7 @@
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
+            flex-wrap: wrap; /* Allow content to wrap within the box */
             align-items: center;
         }
         .box img {
@@ -38,10 +39,22 @@
             font-weight: bold;
             color: #333;
         }
+        /* Responsive styles for text within the boxes */
+        .box p {
+            margin: 0;
+            word-wrap: break-word; /* Wrap long words */
+        }
+        .box a {
+            word-break: break-all; /* Break long URLs */
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="intro">
+            <h1>Welcome to Asker Mektupları!</h1>
+            <p>Kutuların yanında gördüğün zamanda mektuplar görünür olacaktırrr</p>
+        </div>
         <div class="box">
             <p class="time">21 Nisan 2024 09:00</p>
             <img id="image1" src="image1.webp" alt="Image 1">
