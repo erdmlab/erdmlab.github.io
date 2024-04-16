@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypted Content</title>
+</head>
+<body>
+    <div id="p1">Paragraph 1 will be revealed at a specific time.</div>
+    <hr> <!-- Separator -->
+
+    <div id="p2">Paragraph 2 will be revealed at a specific time.</div>
+    <hr> <!-- Separator -->
+
+    <div id="p3">Paragraph 3 will be revealed at a specific time.</div>
+    <hr> <!-- Separator -->
+
+    <div id="p4">Paragraph 4 will be revealed at a specific time.</div>
+    <hr> <!-- Separator -->
+
+    <div id="p5">Paragraph 5 will be revealed at a specific time.</div>
+    <hr> <!-- Separator -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        // Encrypt your paragraphs (replace these with your actual content)
+        var p1Message = "This is paragraph 1";
+        var p1Encrypted = CryptoJS.AES.encrypt(p1Message, "your_secret_key_1").toString();
+
+        var p2Message = "This is paragraph 2";
+        var p2Encrypted = CryptoJS.AES.encrypt(p2Message, "your_secret_key_2").toString();
+
+        var p3Message = "This is paragraph 3";
+        var p3Encrypted = CryptoJS.AES.encrypt(p3Message, "your_secret_key_3").toString();
+
+        var p4Message = "This is paragraph 4";
+        var p4Encrypted = CryptoJS.AES.encrypt(p4Message, "your_secret_key_4").toString();
+
+        var p5Message = "This is paragraph 5";
+        var p5Encrypted = CryptoJS.AES.encrypt(p5Message, "your_secret_key_5").toString();
+
+        // Function to decrypt and reveal content
+        function revealContent(elementId, encryptedMessage, decryptionKey) {
+            var decryptedMessage = CryptoJS.AES.decrypt(encryptedMessage, decryptionKey).toString(CryptoJS.enc.Utf8);
+            document.getElementById(elementId).textContent = decryptedMessage;
+        }
+
+        // Set timers to reveal content at specific times
+        var revealTime1 = new Date("2024-04-16T00:10:00").getTime(); // Change this to your desired time for p1
+        var revealTime2 = new Date("2024-04-16T00:12:00").getTime(); // Change this to your desired time for p2
+        var revealTime3 = new Date("2024-04-16T01:15:00").getTime(); // Change this to your desired time for p3
+        var revealTime4 = new Date("2024-04-16T15:00:00").getTime(); // Change this to your desired time for p4
+        var revealTime5 = new Date("2024-04-16T16:00:00").getTime(); // Change this to your desired time for p5
+
+        var currentTime = new Date().getTime();
+
+        if (currentTime < revealTime1) {
+            setTimeout(function () { revealContent('p1', p1Encrypted, "your_secret_key_1"); }, revealTime1 - currentTime);
+        } else {
+            revealContent('p1', p1Encrypted, "your_secret_key_1");
+        }
+
+        if (currentTime < revealTime2) {
+            setTimeout(function () { revealContent('p2', p2Encrypted, "your_secret_key_2"); }, revealTime2 - currentTime);
+        } else {
+            revealContent('p2', p2Encrypted, "your_secret_key_2");
+        }
+
+        if (currentTime < revealTime3) {
+            setTimeout(function () { revealContent('p3', p3Encrypted, "your_secret_key_3"); }, revealTime3 - currentTime);
+        } else {
+            revealContent('p3', p3Encrypted, "your_secret_key_3");
+        }
+
+        if (currentTime < revealTime4) {
+            setTimeout(function () { revealContent('p4', p4Encrypted, "your_secret_key_4"); }, revealTime4 - currentTime);
+        } else {
+            revealContent('p4', p4Encrypted, "your_secret_key_4");
+        }
+
+        if (currentTime < revealTime5) {
+            setTimeout(function () { revealContent('p5', p5Encrypted, "your_secret_key_5"); }, revealTime5 - currentTime);
+        } else {
+            revealContent('p5', p5Encrypted, "your_secret_key_5");
+        }
+    </script>
+</body>
+</html>
