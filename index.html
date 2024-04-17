@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delayed Content with Photos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "log.php",
-                success: function(response) {
-                    console.log(response); // Log the response (optional)
-                },
-                error: function(xhr, status, error) {
-                    console.error(error); // Log any errors (optional)
-                }
-            });
-        });
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
