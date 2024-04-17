@@ -4,21 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delayed Content with Photos</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "log.php",
-                success: function(response) {
-                    console.log(response); // Log the response (optional)
-                },
-                error: function(xhr, status, error) {
-                    console.error(error); // Log any errors (optional)
-                }
-            });
-        });
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,7 +57,7 @@
         </div>
         <div class="box">
             <p class="time">21 Nisan 2024 09:00</p>
-            <img id="image1" src="./resim/image1.webp" alt="Image 1">
+            <img id="image1" src="image1.webp" alt="Image 1">
             <div id="paragraph1" class="hidden">
                 <p>HELLLLOOOOOOOOOOO</p>
                 <p>Gitti sandın de miiiiiiii dshjgdhjsgdjh bak burdayım bak askerden mektup gönderiyorum.</p>
@@ -90,7 +75,7 @@
         </div>
         <div class="box">
             <p class="time">28 Nisan 2024 09:00</p>
-            <img id="image2" src="./resim/image2.webp" alt="Image 2">
+            <img id="image2" src="image2.webp" alt="Image 2">
             <div id="paragraph2" class="hidden">
                 <p>MERHABALAR MERHABALAR PAZAR GÜNÜMÜZ KUTLU OLSUN shdjshdkjshk</p>
                 <p>Nabersin 1 hafta geçti nasıl gidiyorrr.</p>
@@ -111,7 +96,7 @@
         </div>
         <div class="box">
             <p class="time">5 Mayıs 2024 09:00</p>
-            <img id="image3" src="./resim/image9.webp" alt="Image 3">
+            <img id="image3" src="image9.webp" alt="Image 3">
             <div id="paragraph3" class="hidden">    
             <p>Bonjour Monjour matmazel</p> 
             <p>Sevdim bu monjouru ben ya dshdjsghjds</p>
@@ -131,7 +116,7 @@
         </div>
         <div class="box">
             <p class="time">12 Mayıs 2024 09:00</p>
-            <img id="image4" src="./resim/image10.webp" alt="Image 4">
+            <img id="image4" src="image10.webp" alt="Image 4">
             <div id="paragraph4" class="hidden">
                 <p>GOODYY PAZARLAR EFENİMMM</p>
                 <p>SON HAFTA BİTTTİİİİİİ</p>
@@ -152,7 +137,7 @@
         </div>
         <div class="box">
             <p class="time">14 Mayıs 2024 09:00</p>
-            <img id="image5" src="./resim/image6.webp" alt="Image 5">
+            <img id="image5" src="image6.webp" alt="Image 5">
             <div id="paragraph5" class="hidden">
                 <p>Yarın çıkıyorummmmmmm YARIN GELİYORUMMMMM</p>
                 <p>Yani umarımmm, umarım birşey yanlış gitmemiştir ve askerlik uzamamıştır...</p>
