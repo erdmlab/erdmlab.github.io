@@ -39,8 +39,9 @@ body {
 }
 
 .content p {
-    font-family: 'Merriweather', serif; /* Use a fancy readable font for p */
+    font-family: 'Open Sans', sans-serif; /* Use 'Open Sans' for p */
     font-size: 16px; /* Example size, adjust as needed */
+    line-height: 1.5; /* Improve readability with a slightly increased line-height */
 }
 
 .content img {
