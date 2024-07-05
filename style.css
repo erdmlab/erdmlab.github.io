@@ -10,8 +10,8 @@ body {
 }
 
 .book {
-    width: 600px;
-    height: 400px;
+    width: 80vw;
+    height: 50vh;
     perspective: 1000px;
     position: relative;
 }
@@ -47,7 +47,11 @@ body {
 
     .book {
         width: 100vw;
-        height: 100vh;
+        height: 50vh;
         margin-bottom: 0;
+    }
+
+    .content {
+        padding: 10px;
     }
 }

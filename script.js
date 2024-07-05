@@ -1,10 +1,26 @@
 $(document).ready(function() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+    function updateBookSize() {
+        if (isMobile) {
+            const width = $(window).width();
+            const height = $(window).height();
+
+            $('.book').turn('size', width, height * 0.5);
+
+            // Ensure the orientation is horizontal
+            if (window.orientation !== 90 && window.orientation !== -90) {
+                alert("Please rotate your device to landscape mode for the best experience.");
+            }
+        } else {
+            $('.book').turn('size', 800, 400);
+        }
+    }
+
     if (isMobile) {
         $('.book').turn({
             width: $(window).width(),
-            height: $(window).height(),
+            height: $(window).height() * 0.5,
             autoCenter: true
         });
 
@@ -16,22 +32,14 @@ $(document).ready(function() {
             $('.book').turn('previous');
         });
 
-        // Ensure the orientation is horizontal
-        window.addEventListener("orientationchange", function() {
-            if (window.orientation !== 90 && window.orientation !== -90) {
-                alert("Please rotate your device to landscape mode for the best experience.");
-            }
-        });
-
-        // Check initial orientation
-        if (window.orientation !== 90 && window.orientation !== -90) {
-            alert("Please rotate your device to landscape mode for the best experience.");
-        }
+        window.addEventListener("orientationchange", updateBookSize);
     } else {
         $('.book').turn({
-            width: 600,
+            width: 800,
             height: 400,
             autoCenter: true
         });
     }
+
+    $(window).resize(updateBookSize);
 });
