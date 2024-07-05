@@ -2,7 +2,6 @@ body {
     background-color: #f5f5dc;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -15,7 +14,6 @@ body {
     height: 400px;
     perspective: 1000px;
     position: relative;
-    margin-bottom: 20px;
 }
 
 .page {
@@ -40,25 +38,6 @@ body {
     margin: 10px 0;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-}
-
-button {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    background-color: #ffcc00;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff9900;
-}
-
 @media (max-width: 768px) {
     body {
         height: auto;
@@ -68,17 +47,7 @@ button:hover {
 
     .book {
         width: 100vw;
-        height: calc(100vh - 60px);
+        height: 100vh;
         margin-bottom: 0;
-    }
-
-    .navigation {
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 10px;
-    }
-
-    button {
-        width: 45%;
     }
 }

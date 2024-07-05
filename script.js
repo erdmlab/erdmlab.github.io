@@ -4,12 +4,9 @@ $(document).ready(function() {
     if (isMobile) {
         $('.book').turn({
             width: $(window).width(),
-            height: $(window).height() - 60,
+            height: $(window).height(),
             autoCenter: true
         });
-
-        $('#next').hide();
-        $('#prev').hide();
 
         $(document).on('swipeleft', function() {
             $('.book').turn('next');
@@ -35,14 +32,6 @@ $(document).ready(function() {
             width: 600,
             height: 400,
             autoCenter: true
-        });
-
-        $('#next').click(function() {
-            $('.book').turn('next');
-        });
-
-        $('#prev').click(function() {
-            $('.book').turn('previous');
         });
     }
 });
