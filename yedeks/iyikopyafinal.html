@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delayed Content with Photos</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,7 +57,7 @@
         </div>
         <div class="box">
             <p class="time">21 Nisan 2024 09:00</p>
-            <img id="image1" src="./resim/image1.webp" alt="Image 1">
+            <img id="image1" src="image1.webp" alt="Image 1">
             <div id="paragraph1" class="hidden">
                 <p>HELLLLOOOOOOOOOOO</p>
                 <p>Gitti sandın de miiiiiiii dshjgdhjsgdjh bak burdayım bak askerden mektup gönderiyorum.</p>
@@ -69,16 +68,14 @@
                 <p>Aslında çok basit cevabı ama biraz gıcıklığın zararı olmaz dhsgdhsjgdhjs</p>
                 <p>Bu mektupların ne için olduğunu sana geldiği vakte baktıysan anlamıssındır diye düşünüyorum.</p>
                 <p>Askerlik maskerlik pazar şarkı zevkimizi elimizden alamaz!!!</p>
-                <p><a href="https://erdmlab.github.io/resim/image11.webp">Bu mesajını hatırlıyor musun ??? üzerine bassana</a></p>
-                <p>Yanlış emoji demiştim ya sjhdsjsdjshk ben aslında gülme emojisi atmıştım çünkü o sırada bu sitenin son ayarlarını yapıyordum</p>
                 <p>Sen bu şarkıya dans ederken bende asker arkadaşlarımla ortama alışıyor olurum heralde.</p>
                 <p>O yüzden ikimiz içinde pazar enerjimizi yaşamak senin elinde SJDHSJKDKHJSJ</p>
-                <p><a href="https://youtu.be/5AtkWnBjGBU?si=FnpJVN-rxNL2eL0z">BURAYA TIKLAAA</a></p>
+                <p><a href="https://youtu.be/5AtkWnBjGBU?si=FnpJVN-rxNL2eL0z">TIKLAAA</a></p>
             </div>
         </div>
         <div class="box">
             <p class="time">28 Nisan 2024 09:00</p>
-            <img id="image2" src="./resim/image2.webp" alt="Image 2">
+            <img id="image2" src="image2.webp" alt="Image 2">
             <div id="paragraph2" class="hidden">
                 <p>MERHABALAR MERHABALAR PAZAR GÜNÜMÜZ KUTLU OLSUN shdjshdkjshk</p>
                 <p>Nabersin 1 hafta geçti nasıl gidiyorrr.</p>
@@ -99,7 +96,7 @@
         </div>
         <div class="box">
             <p class="time">5 Mayıs 2024 09:00</p>
-            <img id="image3" src="./resim/image9.webp" alt="Image 3">
+            <img id="image3" src="image9.webp" alt="Image 3">
             <div id="paragraph3" class="hidden">    
             <p>Bonjour Monjour matmazel</p> 
             <p>Sevdim bu monjouru ben ya dshdjsghjds</p>
@@ -113,12 +110,13 @@
             <p>Stickerlarımız nasıl olmuş? siteme renk katıyor benceee</p>
             <p>Bu da kuğularımızdan bir tanesi sanırım sana hiç atmadım bunu mektuba özel olsun diye saklamak istedim.</p>
             <p>Kuğu ile pazar enerjimize dans ettt isterse aristoda gelsinnn.</p>
+            <p>Bana attığın videodaki gibi dans edin SJHDGSGJHSD</p>
             <p><a href="https://youtu.be/d5dTJGZjEs4?si=ovFlJkHG4mxZl8f0">İşte şarkımızzz</a></p>
             </div>
         </div>
         <div class="box">
             <p class="time">12 Mayıs 2024 09:00</p>
-            <img id="image4" src="./resim/image10.webp" alt="Image 4">
+            <img id="image4" src="image10.webp" alt="Image 4">
             <div id="paragraph4" class="hidden">
                 <p>GOODYY PAZARLAR EFENİMMM</p>
                 <p>SON HAFTA BİTTTİİİİİİ</p>
@@ -134,12 +132,12 @@
                 <p>GICIK ETMEYE GELİYORUMMMMM BEKLE BENİİİ</p>
                 <p>Şaka maka artık evime dönmek istiyorum.</p>
                 <p>Modumu bu şekilde ifade ediyorumm </p>
-                <p><a href="https://youtu.be/eRPF_MR6o4g?si=8j087GQ61D0finl9">Bu sefer biraz chill bir sarki seçtim</a></p>
+                <p><a href="https://youtu.be/QM7IPvh4UxM?si=EETbGewuevvwDCLw">Bu sefer biraz chill bir sarki seçtim</a></p>
             </div>
         </div>
         <div class="box">
-            <p class="time">14 Mayıs 2024 20:00</p>
-            <img id="image5" src="./resim/image6.webp" alt="Image 5">
+            <p class="time">14 Mayıs 2024 09:00</p>
+            <img id="image5" src="image6.webp" alt="Image 5">
             <div id="paragraph5" class="hidden">
                 <p>Yarın çıkıyorummmmmmm YARIN GELİYORUMMMMM</p>
                 <p>Yani umarımmm, umarım birşey yanlış gitmemiştir ve askerlik uzamamıştır...</p>
@@ -163,11 +161,11 @@
 
         // Define the dates with hours and minutes when paragraphs should become visible
         const dates = [
-            { id: 'paragraph1', date: new Date('April 21, 2023 09:00:00') },
+            { id: 'paragraph1', date: new Date('April 12, 2024 09:00:00') },
             { id: 'paragraph2', date: new Date('April 28, 2023 09:00:00') },
             { id: 'paragraph3', date: new Date('May 5, 2023 09:00:00') },
             { id: 'paragraph4', date: new Date('May 12, 2023 09:00:00') },
-            { id: 'paragraph5', date: new Date('May 14, 2023 20:00:00') }
+            { id: 'paragraph5', date: new Date('May 14, 2023 09:00:00') }
         ];
 
         // Show the content and image for each paragraph after the specified time
