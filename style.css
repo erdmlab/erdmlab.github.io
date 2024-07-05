@@ -10,8 +10,8 @@ body {
 }
 
 .book {
-    width: 80vw;
-    height: 50vh;
+    width: 600px;
+    height: 400px;
     perspective: 1000px;
     position: relative;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .content img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     margin: 10px 0;
 }
@@ -47,11 +47,7 @@ body {
 
     .book {
         width: 100vw;
-        height: 50vh;
+        height: 100vh;
         margin-bottom: 0;
-    }
-
-    .content {
-        padding: 10px;
     }
 }
