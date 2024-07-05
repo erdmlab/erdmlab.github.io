@@ -30,6 +30,7 @@ body {
 .content {
     padding: 20px;
     text-align: center;
+    font-size: 18px; /* Reduced font size */
 }
 
 .content img {
