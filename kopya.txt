@@ -13,15 +13,11 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            /* Add wallpaper background */
-            background-image: url('1.jpeg');  /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #ffffff; /* Adjust text color if needed */
+            background-color: #f0f0f5;
         }
         h1 {
             font-size: 2em;
+            color: #333;
             margin-bottom: 20px;
         }
         .link-container {
@@ -36,12 +32,10 @@
             padding: 10px 20px;
             border: 2px solid #007bff;
             border-radius: 8px;
-            display: inline-block;
-            text-align: center;
+            display: inline-block;  /* Ensures padding applies around text */
+            text-align: center;     /* Centers text within the link */
             transition: background-color 0.3s, color 0.3s;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-            color: #007bff;
-            width: 200px;
+            width: 200px;           /* Adjust width as needed to center text */
         }
         .link-container a:hover {
             background-color: #007bff;
@@ -50,12 +44,11 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to My Main Site</h1>
+    <h1>Ebrar &#x2764; Erdem</h1>
     <div class="link-container">
         <a href="/asker_mektup/index.html" target="_blank">Asker Mektupları</a>
         <a href="/masal/index.html" target="_blank">Masalımız</a>
     </div>
 </body>
 </html>
-
 
