@@ -13,16 +13,17 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            /* Add wallpaper background */
-            background-image: url('1.jpeg');  /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
+            /* Wallpaper background optimized for vertical display */
+            background-image: url('1.jpeg'); /* Replace with your image path */
+            background-size: auto 100vh; /* Adjusts height fully on mobile screens */
+            background-position: center center;
             background-repeat: no-repeat;
             color: #ffffff; /* Adjust text color if needed */
         }
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
+            text-align: center;
         }
         .link-container {
             display: flex;
@@ -47,15 +48,27 @@
             background-color: #007bff;
             color: #fff;
         }
+
+        /* Additional styling for small mobile screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .link-container a {
+                font-size: 1.2em;
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Main Site</h1>
+    <h1>Ebrar &#x2764; Erdem</h1>
     <div class="link-container">
         <a href="/asker_mektup/index.html" target="_blank">Asker Mektupları</a>
         <a href="/masal/index.html" target="_blank">Masalımız</a>
     </div>
 </body>
 </html>
+
 
 
