@@ -2,185 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Fairy Tale Proposal</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="turn.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delayed Content with Photos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .box {
+            border: 2px solid #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Allow content to wrap within the box */
+            align-items: center;
+        }
+        .box img {
+            max-width: 150px;
+            margin-right: 20px;
+            display: none; /* Initially hide the images */
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        .time {
+            font-weight: bold;
+            color: #333;
+        }
+        /* Responsive styles for text within the boxes */
+        .box p {
+            margin: 0;
+            word-wrap: break-word; /* Wrap long words */
+        }
+        .box a {
+            word-break: break-all; /* Break long URLs */
+        }
+    </style>
 </head>
 <body>
-    <div class="book">
-        <div class="page">
-            <div class="content">
-                <h1>Once upon a time...</h1>
-                <img src="images/image2.webp" alt="Image 1">
-                <p>Erdem, slowly üzerinden rastgele gördüğü birine mektup yazmaya karar verir.</p>
+    <div class="container">
+        <div class="intro">
+            <h1>Welcome to Asker Mektupları!</h1>
+            <p>Kutuların yanında gördüğün zamanda mektuplar görünür olacaktırrr</p>
+        </div>
+        <div class="box">
+            <p class="time">21 Nisan 2024 09:00</p>
+            <img id="image1" src="./resim/image1.webp" alt="Image 1">
+            <div id="paragraph1" class="hidden">
+                <p>HELLLLOOOOOOOOOOO</p>
+                <p>Gitti sandın de miiiiiiii dshjgdhjsgdjh bak burdayım bak askerden mektup gönderiyorum.</p>
+                <p>Tamam itiraf... tam olarak mektup değil. Ama mail konusuna gıcık olunca başka bir çare bulmam gerekiyordu sdjhsjdshkjd</p>
+                <p>Sana hala neden mailini istediğimi söylemedim de mi?</p>
+                <p>Çünküüüüü......</p>
+                <p>Neyse bunun cevabını haftaya cevaplayacağım.</p>
+                <p>Aslında çok basit cevabı ama biraz gıcıklığın zararı olmaz dhsgdhsjgdhjs</p>
+                <p>Bu mektupların ne için olduğunu sana geldiği vakte baktıysan anlamıssındır diye düşünüyorum.</p>
+                <p>Askerlik maskerlik pazar şarkı zevkimizi elimizden alamaz!!!</p>
+                <p><a href="https://erdmlab.github.io/resim/image11.webp">Bu mesajını hatırlıyor musun ??? üzerine bassana</a></p>
+                <p>Yanlış emoji demiştim ya sjhdsjsdjshk ben aslında gülme emojisi atmıştım çünkü o sırada bu sitenin son ayarlarını yapıyordum</p>
+                <p>Sen bu şarkıya dans ederken bende asker arkadaşlarımla ortama alışıyor olurum heralde.</p>
+                <p>O yüzden ikimiz içinde pazar enerjimizi yaşamak senin elinde SJDHSJKDKHJSJ</p>
+                <p><a href="https://youtu.be/5AtkWnBjGBU?si=FnpJVN-rxNL2eL0z">BURAYA TIKLAAA</a></p>
             </div>
         </div>
-        <div class="page">
-            <div class="content">
-                <p>Mektup şans eseri Ebrar adında birine ulaşır. 
-                    Ebrar mektubu okur ve cevaplar. 
-                    Bu 2'li hergün mektup gönderirler ve birbirlerini tanımaya başlarlar.
-                </p>
+        <div class="box">
+            <p class="time">28 Nisan 2024 09:00</p>
+            <img id="image2" src="./resim/image2.webp" alt="Image 2">
+            <div id="paragraph2" class="hidden">
+                <p>MERHABALAR MERHABALAR PAZAR GÜNÜMÜZ KUTLU OLSUN shdjshdkjshk</p>
+                <p>Nabersin 1 hafta geçti nasıl gidiyorrr.</p>
+                <p>Ben alıştım buralara... yani sanırsam alıştım galiba bilmiyorum shjdgsgds</p>
+                <p>Eğitim meğitim değilde zaman yavaş geçiyor gibi hissediyorum.</p>
+                <p>Olsun 3 haftadan az kaldı pek bir vakit değil geçer gider.</p>
+                <p>Veee beklediğin konuuuu.... neden mailini istedim??</p>
+                <p>Dediğim gibi cevap basit aslında.</p>
+                <p>Gmail üzerinde ileri zamanlı mektup gönderme özelliği vardı</p>
+                <p>Sana kolayca ben gittiğimde şarkılarımı gönderebilecektim.</p>
+                <p>Ama dürüst olayım böyle daha iyi oldu. Neden mi?</p>
+                <p>Kod yazmayı özlemişim shdghsgdjs biraz alıştırma oldu.</p>
+                <p>Hiç websitesi geliştirme işlerine girişmemiştim basit birşey yaparak öğrenmiş oldum.</p>
+                <p>Slowly kadar güzel değil biliyorummm HJSGDHJSGDJHS ama idare eder bence zamanım kısıtlıydı bu kadar çıkarabildim.</p>
+                <p>Veee evet şarkımız geliyorrrrr bir alkışşş</p> 
+                <p><a href="https://youtu.be/iR1sAex__VA?si=t4i-PfqMXQEfjE5b">Şarkı linkiii</a></p>
             </div>
         </div>
-        <div class="page">
-            <div class="content">
-                
-                <p>Çok zaman geçmeden twitter üzerinden konuşmaya devam ederler. 
-                    Enerjileri o kadar yüksektir ki twitter bu enerjiyi kaldıramaz ve çökmeye başlar.
-                </p>
-                <img src="images/aristo.webp" alt="Image 2">
-                
+        <div class="box">
+            <p class="time">5 Mayıs 2024 09:00</p>
+            <img id="image3" src="./resim/image9.webp" alt="Image 3">
+            <div id="paragraph3" class="hidden">    
+            <p>Bonjour Monjour matmazel</p> 
+            <p>Sevdim bu monjouru ben ya dshdjsghjds</p>
+            <p>Nasılsınnnn, hayat nasıl, okul nasıl, Aristo nasıl?</p>
+            <p>Gelecekten gelen mektuplarda 3. bölüme hoşgeldinn</p>
+            <p>Artık galiba askere alıştım diyebilirim. Öyle böyle zaman geçiyor.</p>
+            <p>Kitaplarımın hangilerini bitirmişimdir? Tahmin et whatsappdan yaz banaaa.</p>
+            <p>Bakalım hislerin ne kadar iyileşti sjdhsjdhjks</p>
+            <p>Tam da bunu yazarken seninle whatsapp dan hisler hakkında konuşuyoruz. </p>
+            <p>Kolundaki tokanın rengini bilemedim buga soktun hislerimi hatırladın mııı SGDSHJDGSHHSJDHJSJ</p>
+            <p>Stickerlarımız nasıl olmuş? siteme renk katıyor benceee</p>
+            <p>Bu da kuğularımızdan bir tanesi sanırım sana hiç atmadım bunu mektuba özel olsun diye saklamak istedim.</p>
+            <p>Kuğu ile pazar enerjimize dans ettt isterse aristoda gelsinnn.</p>
+            <p><a href="https://youtu.be/d5dTJGZjEs4?si=ovFlJkHG4mxZl8f0">İşte şarkımızzz</a></p>
             </div>
         </div>
-        <div class="page">
-            <div class="content">
-                <p>Sohbet etmenin yanında beraber oyun oynamaya başlarlar. Amiral battı en sevdikleri oyun olur. Ne şanstır ki Erdem hiç kaybetmez! Hep kazanır, hep kazanır!</p>
-                <img src="images/haha.webp" alt="Image 2">
+        <div class="box">
+            <p class="time">12 Mayıs 2024 09:00</p>
+            <img id="image4" src="./resim/image10.webp" alt="Image 4">
+            <div id="paragraph4" class="hidden">
+                <p>GOODYY PAZARLAR EFENİMMM</p>
+                <p>SON HAFTA BİTTTİİİİİİ</p>
+                <p>Tam alıştık şimdi bitiyor askerlik ya hiç adil değilll.</p>
+                <p>Acaba neler neler yaşamışımdır. Ben de bunu yazarken merak ediyorum açıkçası...</p>
+                <p>Sınavların veya sunumların başladı mı acaba onu da merak ediyorum projenizde ne durumdasınız.</p>
+                <p>Umarım herşey yolundadır. Dua ediyorum sana buradann</p>
+                <p>Şarkılarımı beğendin mi bakalımmm?? Whatsapptan puanla bana hafta ve şarkılarııı</p>
+                <p>Yarışma şarkıları için kullanacağım en iyi şarkıları sakladım ama hala beklettiğim şarkılar varrrr</p>
+                <p>Hatta çoçukken çok sevdiklerimi buldum. Artık ben gelince O SES ENERJI programımıza devam ederizz</p>
+                <p>Bak bu sefer Renayı koydum resmeee shdsghdjsgdhjs</p>
+                <p>Evveeet gelişim yakınnn ama özledin miii beni SDJSHDJSHDKJS</p>
+                <p>GICIK ETMEYE GELİYORUMMMMM BEKLE BENİİİ</p>
+                <p>Şaka maka artık evime dönmek istiyorum.</p>
+                <p>Modumu bu şekilde ifade ediyorumm </p>
+                <p><a href="https://youtu.be/eRPF_MR6o4g?si=8j087GQ61D0finl9">Bu sefer biraz chill bir sarki seçtim</a></p>
             </div>
         </div>
-        <div class="page">
-            <div class="content">
-                <p>Ancak Ebrar, rus oyun modunu keşfeder ve azimli bir şekilde "Deryaların Kaptanı" rütbesine erişmeyi başarır.
-                </p>
-                <img src="images/sunger.webp" alt="Image 2">
+        <div class="box">
+            <p class="time">14 Mayıs 2024 20:00</p>
+            <img id="image5" src="./resim/image6.webp" alt="Image 5">
+            <div id="paragraph5" class="hidden">
+                <p>Yarın çıkıyorummmmmmm YARIN GELİYORUMMMMM</p>
+                <p>Yani umarımmm, umarım birşey yanlış gitmemiştir ve askerlik uzamamıştır...</p>
+                <p>Eğer çıkamazsam limonun bakışı gibi komutana bakış atacağım</p>
+                <p>Bu arada askerliği 6 ay yapsam hayvanlar alemini dolduracaktım her mektuba 1 tane diye diye SDHSGHDJS</p>
+                <p>Yarın akşam evde olmayı umut ediyorum hayırlısı artık. Dua et banaaa</p>
+                <p>Şuan belki toplanıyor bile olabilirim.</p>
+                <p>Geri geldiğimde bana bir parti hazırlarsın heraldeee sjdhsjkkgdf</p>
+                <p>Mektuplarımı okuduğun için gerçekten teşekkür ederimmmm. </p>
+                <p>En kısa zamanda görüşmek üzere... hem telefondan hem de inşallah yüz yüze...</p>
+                <p><a href="https://youtu.be/uvLwSpoYMc4?si=xPjy-ZcmmH7R6vr2">Eve dönüş şarkım</a></p>
             </div>
         </div>
-
-        <div class="page">
-            <div class="content">
-                <p>Erdem ve Ebrar her pazar birbirlerine enerji dolu şarkı göndermektedirler. Bir gün gönderdikleri şarkıları puanlarken akıllarına bir yarışma yapmak gelir. Bu yarışmanın adını "O SES ENERJI" koyarlar. Her pazar sabah saatleri bu yarışma için bir araya gelip harika şarkılar dinlerler.
-                </p>
-                <img src="images/yarisma.jpeg" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Bunlara ek olarak çok sevdikleri Geogussr'ı oynayarak dünyayı birlikte gezerler. (Erdem bazen nokta atışı yaparak Ebrar'ı gıcık eder.)
-                </p>
-                <img src="images/dunya.jpeg" alt="Image 2">
-            </div>
-        </div>
-
-        <div class="page">
-            <div class="content">
-                <p>Hiç hayvanlardan bahsetmiş miydik? Ebrar'ın 2 tatlış kuşu vardır. İkili kuşlardan yola çıkarak birbirine çıkartmalar yapmaya başlar.
-                </p>
-                <img src="images/image1.webp" alt="Image 2">
-                <img src="images/image6.webp" alt="Image 2">
-                <img src="images/image3.webp" alt="Image 2">
-            </div>
-        </div>
-
-        <div class="page">
-            <div class="content">
-                <p>Aynı zamanda postit üzerinden yaratıcı resimler göndererek hiç beklenmeyen zamanlarda birbirlerinin yüzünü güldürürler.</p>
-                <img src="images/parti.jpeg" alt="Image 2">
-                <img src="images/panda.webp" alt="Image 2">
-                <img src="images/kotupc.webp" alt="Image 2">
-            </div>
-        </div>
-
-
-        <div class="page">
-            <div class="content">
-                <img src="images/asker.jpeg" alt="Image 2">
-                <p>Bir süre sonra Erdem'in askerlik dönemi gelir. 2'li uzun zaman sonra birbirleri ile konuşamayacakları için mutsuz olur.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Erdem bu sorunun çözümü için ileriye mektup gönderebileceği bir websitesi oluşturur. Ebrar ise o yokken mektuplarını cevaplayarak ileri zamana mesaj gönderir.
-                </p>
-                <img src="images/mektup.JPG" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Erdem askerden döndükten sonra konuşmaya devam ederler. Artık bir buluşma ayarlamak, yüz yüze tanışmak isterler. O sırada Ebrar okuldan mezun olur, iş bulur ve İstanbula geri döner. Bu şekilde İstanbul'da buluşabilecekleri bir zaman ayarlarlar.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>İkili bir araya gelir harika zaman geçirirler.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Yıldız parkına giderler,
-                </p>
-                <img src="images/yildiz.jpeg" alt="Image 2">
-                <img src="images/y2.jpeg" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Vapur turu yaparlar,
-                </p>
-                <img src="images/vapur.jpeg" alt="Image 2">
-                <img src="images/v2.jpeg" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Çok gezmek istedikleri dijital deneyim müzesini gezerler,
-                </p>
-                <img src="images/m1.jpeg" alt="Image 2">
-                <img src="images/m2.jpeg" alt="Image 2">
-                <img src="images/d2.jpeg" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Maalesef haftasonu biter ve Erdem geri dönmek zorunda kalır. Yine de ikili çok zaman geçmeden bir sonraki buluşacakları zamanı ve birlikte yapacakları etkinlikleri planlarlar.</p>
-                <p>Onları Dktt konseri, adalar gezisi, florya sahili ve yiyebilecekler türlü türlü yemek ve tatlılar beklemektedir.</p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Gezecekleri yerler onları bekleyecektir tabi ki. Ancak Erdem'in artık söylemek için bekleyemeyeceği birşey vardır.</p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Artık zamanı geldi diye düşünmektedir.</p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <img src="images/miyav.webp" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Bu kedi nasıl girdi buraya!!! SSHJDGSHJDGHSJDSJHD</p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Senden hoşlanıyorum Ebrar</p>
-                <img src="images/t1.jpeg" alt="Image 2">
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Evet belki tekrar buluştuğumuzda söylemeliydim ama kendimi tutamadım :)</p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="content">
-                <p>Veee bu masal şimdilik biter. Masalın devamı için senin düşüncene ihtiyacım var. Ne dersin?</p>
-                <img src="images/kopek.webp" alt="Image 2">
-            </div>
-        </div>
-        <!-- Add more pages as needed -->
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function showContent(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById(id).classList.add('visible');
+        }
+
+        // Define the dates with hours and minutes when paragraphs should become visible
+        const dates = [
+            { id: 'paragraph1', date: new Date('April 21, 2023 09:00:00') },
+            { id: 'paragraph2', date: new Date('April 28, 2023 09:00:00') },
+            { id: 'paragraph3', date: new Date('May 5, 2023 09:00:00') },
+            { id: 'paragraph4', date: new Date('May 12, 2023 09:00:00') },
+            { id: 'paragraph5', date: new Date('May 14, 2023 20:00:00') }
+        ];
+
+        // Show the content and image for each paragraph after the specified time
+        const currentDate = new Date();
+        dates.forEach(item => {
+            if (currentDate >= item.date) {
+                showContent(item.id);
+                const imageId = 'image' + item.id.substring(9); // Extract the number from the paragraph id
+                document.getElementById(imageId).style.display = 'inline'; // Show the corresponding image
+            }
+        });
+    </script>
 </body>
 </html>
